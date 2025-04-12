@@ -1,1 +1,13 @@
-<div>Hello World!</div>
+<div class="mx-auto mt-4" style="width: 50%;">
+    <app-taskbar (addButtonClicked)="setView('add')"></app-taskbar>
+    <div *ngIf="currentView === 'list'">
+        <app-contact-list (viewContact)="showContactDetail($event)"></app-contact-list>
+    </div>
+    <div *ngIf="currentView === 'view' && contactIndex !== null">
+        <app-contact [index]="contactIndex" (back)="goBackToList()"></app-contact>
+      </div>
+    <div *ngIf="currentView === 'add'">
+        <app-add-contact (saveBtnPressed)="setView('list')"></app-add-contact>
+    </div>
+    
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="border rounded p-4 m-3 shadow-sm">
+        <label class="text-white">First Name:</label>
+        <input class="form-control mb-2" [(ngModel)]="fName" type="text" />
+  
+        <label class="text-white">Last Name:</label>
+        <input class="form-control mb-2" [(ngModel)]="lName" type="text" />
+  
+        <label class="text-white">Phone:</label>
+        <input class="form-control mb-2" [(ngModel)]="phone" type="tel" />
+  
+        <label class="text-white">Email:</label>
+        <input class="form-control mb-2" [(ngModel)]="email" type="email" />
+  
+        <label class="text-white">Address:</label>
+        <input class="form-control mb-2" [(ngModel)]="address" type="text" />
+  
+        <label class="text-white">Notes:</label>
+        <textarea class="form-control mb-3" [(ngModel)]="notes"></textarea>
+  
+        <button class="btn btn-primary" (click)="save()">Save</button>
+    </div>
+  </div>
